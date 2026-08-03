@@ -1,4 +1,4 @@
-// Agent: statusline-setup (object lines 316775-316786)
+// Agent: Plan (object lines 316775-316786)
     Hyo = {
       agentType: "Plan",
       whenToUse:

@@ -1,7 +1,4 @@
-// Agent: worker (lines 317031-317045)
-  var j5u = S(() => {
-    dct();
-    mh();
+// Agent: worker (object lines 317034-317044)
     U5u = {
       agentType: "worker",
       whenToUse:
@@ -13,4 +10,3 @@
       baseDir: "built-in",
       getSystemPrompt: (e) => F5u(),
     };
-  });

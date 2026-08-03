@@ -1,5 +1,4 @@
-// Agent: general-purpose (lines 316697-316707)
-  var slr = S(() => {
+// Agent: general-purpose (object lines 316698-316706)
     BFe = {
       agentType: "general-purpose",
       whenToUse:
@@ -9,4 +8,3 @@
       baseDir: "built-in",
       getSystemPrompt: xhy,
     };
-  });

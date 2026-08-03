@@ -1,5 +1,7 @@
-// Agent: main-session (lines 484054-484057)
-  var pNs = S(() => {
-    Ge();
-    st();
-  });
+// Agent: main-session (object lines 484291-484296)
+      (zYy = {
+        agentType: "main-session",
+        whenToUse: "Main session query",
+        source: "userSettings",
+        getSystemPrompt: () => "",
+      }));
