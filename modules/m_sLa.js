@@ -1,0 +1,36 @@
+// Module: sLa (lines 812608-812642)
+  var sLa = S(() => {
+    Da();
+    nx();
+    vH();
+    iCn();
+    Imf();
+    KJr();
+    va();
+    RMt();
+    LXe();
+    MMt();
+    rL();
+    up();
+    ct();
+    iQr();
+    S1();
+    Go();
+    jS();
+    Vf();
+    Dzr();
+    Vb();
+    Pr();
+    Pmf();
+    cXe();
+    aEe();
+    $k();
+    Vca();
+    ZDa();
+    oAn();
+    Omf();
+    Bmf();
+    ((jd = x(ot(), 1)), (Ba = x(ue(), 1)), (PWt = x(_e(), 1)));
+    sHr = jd.createContext({ setStickyPrompt: () => {} });
+    ((Shf = zj("ctrl+end")), (Ehf = zj("pagedown")));
+  });

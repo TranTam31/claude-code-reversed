@@ -1,0 +1,35 @@
+// Module: Xgs (lines 306811-306844)
+  var Xgs = S(() => {
+    ((Wdy = {
+      up: "upArrow",
+      down: "downArrow",
+      left: "leftArrow",
+      right: "rightArrow",
+      pagedown: "pageDown",
+      pageup: "pageUp",
+      home: "home",
+      end: "end",
+      return: "return",
+      escape: "escape",
+      tab: "tab",
+      backspace: "backspace",
+      delete: "delete",
+    }),
+      (Gdy = [
+        ["escape", "escape"],
+        ["return", "return"],
+        ["tab", "tab"],
+        ["backspace", "backspace"],
+        ["delete", "delete"],
+        ["upArrow", "up"],
+        ["downArrow", "down"],
+        ["leftArrow", "left"],
+        ["rightArrow", "right"],
+        ["pageUp", "pageup"],
+        ["pageDown", "pagedown"],
+        ["wheelUp", "wheelup"],
+        ["wheelDown", "wheeldown"],
+        ["home", "home"],
+        ["end", "end"],
+      ]));
+  });

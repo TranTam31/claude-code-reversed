@@ -1,0 +1,71 @@
+// Module: Ago (lines 308167-308236)
+  var Ago = S(() => {
+    xpy = {
+      default: {
+        keyCase: "title",
+        modCase: "lower",
+        caretCtrl: !1,
+        modSep: "+",
+        arrowSep: "/",
+        chordSep: " ",
+        shiftAsCase: !1,
+        charCase: "preserve",
+        platform: "other",
+      },
+      compact: {
+        keyCase: "lower",
+        modCase: "lower",
+        caretCtrl: !0,
+        modSep: "+",
+        arrowSep: "",
+        chordSep: " ",
+        shiftAsCase: !0,
+        charCase: "preserve",
+        platform: "other",
+      },
+      symbol: {
+        keyCase: "glyph",
+        modCase: "glyph",
+        caretCtrl: !1,
+        modSep: "",
+        arrowSep: "",
+        chordSep: " ",
+        shiftAsCase: !0,
+        charCase: "upper",
+        platform: "other",
+      },
+    };
+    ((Ipy = {
+      enter: ["Enter", "enter", "\u23CE"],
+      escape: ["Esc", "esc", "\u238B"],
+      tab: ["Tab", "tab", "\u21E5"],
+      " ": ["Space", "space", "\u2423"],
+      backspace: ["Backspace", "backspace", "\u232B"],
+      delete: ["Delete", "delete", "\u2326"],
+      up: ["\u2191", "\u2191", "\u2191"],
+      down: ["\u2193", "\u2193", "\u2193"],
+      left: ["\u2190", "\u2190", "\u2190"],
+      right: ["\u2192", "\u2192", "\u2192"],
+      pageup: ["PageUp", "pgup", "\u21DE"],
+      pagedown: ["PageDown", "pgdn", "\u21DF"],
+      home: ["Home", "home", "\u2196"],
+      end: ["End", "end", "\u2198"],
+    }),
+      (Rpy = { title: 0, lower: 1, glyph: 2 }),
+      (Dpy = {
+        ctrl: { lower: "ctrl", title: "Ctrl", glyph: "\u2303" },
+        shift: { lower: "shift", title: "Shift", glyph: "\u21E7" },
+        alt: {
+          lower: (e) => (e === "macos" ? "opt" : "alt"),
+          title: (e) => (e === "macos" ? "Opt" : "Alt"),
+          glyph: "\u2325",
+        },
+        super: {
+          lower: (e) => (e === "macos" ? "cmd" : "super"),
+          title: (e) => (e === "macos" ? "Cmd" : "Super"),
+          glyph: "\u2318",
+        },
+      }),
+      (Ppy = new Set(["up", "down", "left", "right"])),
+      (Mpy = { ctrl: !1, alt: !1, shift: !1, meta: !1, super: !1 }));
+  });

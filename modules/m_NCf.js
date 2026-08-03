@@ -1,0 +1,74 @@
+// Module: NCf (lines 839419-839491)
+  var NCf = S(() => {
+    Da();
+    pt();
+    sm();
+    gke();
+    da();
+    QXe();
+    mw();
+    gx();
+    MH();
+    Xi();
+    DBa();
+    bti();
+    XUa();
+    i2a();
+    l2a();
+    BDe();
+    nx();
+    FDe();
+    va();
+    ct();
+    Ps();
+    zt();
+    vt();
+    tCf();
+    Ise();
+    fGt();
+    iR();
+    Nvr();
+    Y8();
+    Go();
+    fEe();
+    jS();
+    hn();
+    Ge();
+    Qr();
+    st();
+    _z();
+    Ir();
+    sfe();
+    Ylt();
+    v1();
+    sx();
+    pnr();
+    B5();
+    J8();
+    eri();
+    Dh();
+    tsa();
+    Zb();
+    Nie();
+    XD();
+    VUt();
+    ky();
+    Un();
+    Zt();
+    Pr();
+    QFo();
+    Mk();
+    PBa();
+    C2a();
+    rHn();
+    gCf();
+    wCf();
+    HCf();
+    lBa();
+    ((MCf = x(require("fs/promises"))),
+      (JBa = x(require("path"))),
+      (tp = x(ot(), 1)),
+      (zn = x(ue(), 1)),
+      (ZBa = x(_e(), 1)));
+    RsS = ["on", "name-only", "user-invocable-only", "off"];
+  });

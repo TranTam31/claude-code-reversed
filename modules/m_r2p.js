@@ -1,0 +1,103 @@
+// Module: r2p (lines 743744-743845)
+  var r2p = S(() => {
+    gd();
+    kOt();
+    uaa();
+    up();
+    Ir();
+    Pr();
+    u6o = require("path");
+    tXe = { r: 0, g: 0, b: 0, a: 1 };
+    paa = [0, 95, 135, 175, 215, 255];
+    ((FUp = new Map([
+      ["keyword", cd(249, 38, 114)],
+      ["_storage", cd(102, 217, 239)],
+      ["built_in", cd(166, 226, 46)],
+      ["type", cd(166, 226, 46)],
+      ["literal", cd(190, 132, 255)],
+      ["number", cd(190, 132, 255)],
+      ["string", cd(230, 219, 116)],
+      ["title", cd(166, 226, 46)],
+      ["title.function", cd(166, 226, 46)],
+      ["title.class", cd(166, 226, 46)],
+      ["title.class.inherited", cd(166, 226, 46)],
+      ["params", cd(253, 151, 31)],
+      ["comment", cd(117, 113, 94)],
+      ["meta", cd(117, 113, 94)],
+      ["attr", cd(166, 226, 46)],
+      ["attribute", cd(166, 226, 46)],
+      ["variable", cd(255, 255, 255)],
+      ["variable.language", cd(255, 255, 255)],
+      ["property", cd(255, 255, 255)],
+      ["operator", cd(249, 38, 114)],
+      ["punctuation", cd(248, 248, 242)],
+      ["symbol", cd(190, 132, 255)],
+      ["regexp", cd(230, 219, 116)],
+      ["subst", cd(248, 248, 242)],
+    ])),
+      (UUp = new Map([
+        ["keyword", cd(167, 29, 93)],
+        ["_storage", cd(167, 29, 93)],
+        ["built_in", cd(0, 134, 179)],
+        ["type", cd(0, 134, 179)],
+        ["literal", cd(0, 134, 179)],
+        ["number", cd(0, 134, 179)],
+        ["string", cd(24, 54, 145)],
+        ["title", cd(121, 93, 163)],
+        ["title.function", cd(121, 93, 163)],
+        ["title.class", cd(0, 0, 0)],
+        ["title.class.inherited", cd(0, 0, 0)],
+        ["params", cd(0, 134, 179)],
+        ["comment", cd(150, 152, 150)],
+        ["meta", cd(150, 152, 150)],
+        ["attr", cd(0, 134, 179)],
+        ["attribute", cd(0, 134, 179)],
+        ["variable", cd(0, 134, 179)],
+        ["variable.language", cd(0, 134, 179)],
+        ["property", cd(0, 134, 179)],
+        ["operator", cd(167, 29, 93)],
+        ["punctuation", cd(51, 51, 51)],
+        ["symbol", cd(0, 134, 179)],
+        ["regexp", cd(24, 54, 145)],
+        ["subst", cd(51, 51, 51)],
+      ])),
+      (Omb = new Set([
+        "const",
+        "let",
+        "var",
+        "function",
+        "class",
+        "type",
+        "interface",
+        "enum",
+        "namespace",
+        "module",
+        "def",
+        "fn",
+        "func",
+        "struct",
+        "trait",
+        "impl",
+      ])),
+      (Nmb = new Map([
+        ["keyword", r3(13)],
+        ["_storage", r3(14)],
+        ["built_in", r3(14)],
+        ["type", r3(14)],
+        ["literal", r3(12)],
+        ["number", r3(12)],
+        ["string", r3(10)],
+        ["title", r3(11)],
+        ["title.function", r3(11)],
+        ["title.class", r3(11)],
+        ["comment", r3(8)],
+        ["meta", r3(8)],
+      ])));
+    BUp = new Map([
+      ["Dockerfile", "dockerfile"],
+      ["Makefile", "makefile"],
+      ["Rakefile", "ruby"],
+      ["Gemfile", "ruby"],
+      ["CMakeLists", "cmake"],
+    ]);
+  });

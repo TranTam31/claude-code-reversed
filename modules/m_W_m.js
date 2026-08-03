@@ -1,0 +1,37 @@
+// Module: W_m (lines 962690-962725)
+  var W_m = S(() => {
+    vo();
+    yb();
+    ((Mqt = x(ot(), 1)),
+      (JrE = [
+        /\bcurl\b/,
+        /\bwget\b/,
+        /\bssh\b/,
+        /\bkubectl\b/,
+        /\bsrun\b/,
+        /\bdocker\b/,
+        /\bbq\b/,
+        /\bgsutil\b/,
+        /\bgcloud\b/,
+        /\baws\b/,
+        /\bgit\s+push\b/,
+        /\bgit\s+pull\b/,
+        /\bgit\s+fetch\b/,
+        /\bgh\s+(pr|issue)\b/,
+        /\bnc\b/,
+        /\bncat\b/,
+        /\btelnet\b/,
+        /\bftp\b/,
+      ]),
+      (QrE = [
+        /^no[,!]\s/i,
+        /\bthat'?s (wrong|incorrect|not (what|right|correct))\b/i,
+        /\bnot what I (asked|wanted|meant|said)\b/i,
+        /\bI (said|asked|wanted|told you|already said)\b/i,
+        /\bwhy did you\b/i,
+        /\byou should(n'?t| not)? have\b/i,
+        /\byou were supposed to\b/i,
+        /\btry again\b/i,
+        /\b(undo|revert) (that|this|it|what you)\b/i,
+      ]));
+  });

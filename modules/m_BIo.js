@@ -1,0 +1,37 @@
+// Module: BIo (lines 489729-489764)
+  var BIo = S(() => {
+    zt();
+    Zr();
+    vt();
+    IIo();
+    Bj();
+    vo();
+    Tf();
+    Ge();
+    qm();
+    SNs();
+    Qr();
+    st();
+    jp();
+    Gx();
+    jmr();
+    Ck();
+    Lk();
+    H$t();
+    PEe();
+    kUe();
+    uJt();
+    Cro();
+    DHd();
+    CNs();
+    LIo();
+    P4();
+    OIo();
+    VHd();
+    nrn();
+    Sfe();
+    FIo();
+    K1t();
+    mSe();
+    K1t();
+  });

@@ -1,0 +1,101 @@
+// Found at line 21932
+            t?.headers,
+          ]),
+        });
+      }
+    };
+  });
+  var $9t = S(() => {
+    B0i();
+    j0i();
+    Q0i();
+    Z0i();
+    ykl();
+  });
+  class $b {
+    get credentials() {
+      return this._authState.provider;
+    }
+    constructor({
+      baseURL: e = A0("ANTHROPIC_BASE_URL"),
+      apiKey: t,
+      authToken: r,
+      ...n
+    } = {}) {
+      if (
+        (eCi.add(this),
+        (this._requestAuthFlags = new WeakMap()),
+        $Bn.set(this, void 0),
+        t === void 0)
+      )
+        t = n.profile != null ? null : (A0("ANTHROPIC_API_KEY") ?? null);
+      if (r === void 0)
+        r = n.profile != null ? null : (A0("ANTHROPIC_AUTH_TOKEN") ?? null);
+      if (n.profile != null && (n.credentials != null || n.config != null))
+        throw TypeError(
+          "Pass at most one of `profile`, `credentials`, or `config`.",
+        );
+      let o = {
+        apiKey: t,
+        authToken: r,
+        ...n,
+        baseURL: e || "https://api.anthropic.com",
+      };
+      if (!o.dangerouslyAllowBrowser && UHl())
+        throw new js(`It looks like you're running in a browser-like environment.
+
+This is disabled by default, as it risks exposing your secret API credentials to attackers.
+If you understand the risks and have appropriate mitigations in place,
+you can set the \`dangerouslyAllowBrowser\` option to \`true\`, e.g.,
+
+new Anthropic({ apiKey, dangerouslyAllowBrowser: true });
+`);
+      ((this.baseURL = o.baseURL),
+        (this._baseURLIsExplicit = n.__baseURLIsExplicit ?? !!e),
+        (this.timeout = o.timeout ?? tCi.DEFAULT_TIMEOUT),
+        (this.logger = o.logger ?? console));
+      let i = "warn";
+      ((this.logLevel = i),
+        (this.logLevel =
+          XTi(o.logLevel, "ClientOptions.logLevel", this) ??
+          XTi(A0("ANTHROPIC_LOG"), "process.env['ANTHROPIC_LOG']", this) ??
+          i),
+        (this.fetchOptions = o.fetchOptions),
+        (this.maxRetries = o.maxRetries ?? 2),
+        (this.fetch = o.fetch ?? BHl()),
+        Ec(this, $Bn, WHl, "f"));
+      let s = A0("ANTHROPIC_CUSTOM_HEADERS");
+      if (s) {
+        let l = {};
+        for (let c of s.split(`
+`)) {
+          let u = c.indexOf(":");
+          if (u >= 0) l[c.substring(0, u).trim()] = c.substring(u + 1).trim();
+        }
+        o.defaultHeaders = { ...l, ...o.defaultHeaders };
+      }
+      let a = n.__auth;
+      if (
+        (delete o.__auth,
+        delete o.__baseURLIsExplicit,
+        (this._options = o),
+        (this.apiKey = typeof t === "string" ? t : null),
+        (this.authToken = r),
+        a)
+      ) {
+        if (((this._authState = a), !this._baseURLIsExplicit && a.baseURL))
+          this.baseURL = a.baseURL;
+      } else if (
+        ((this._authState = {
+          provider: null,
+          tokenCache: null,
+          resolution: null,
+          error: null,
+          extraHeaders: {},
+        }),
+        this.apiKey == null && this.authToken == null)
+      ) {
+        let l = o.credentials ?? null;
+        if (l)
+          ((this._authState.provider = l),
+            (this._authState.tokenCache = this._makeTokenCache(l)));

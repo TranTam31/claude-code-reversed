@@ -1,0 +1,19 @@
+# Claude Code Harness - Component Map
+# Generated from claude.exe 2.1.220 (Bun bundle, prettified)
+
+PreToolUse                     line(s): 57486, 71977, 253441
+PostToolUse                    line(s): 57487, 57488, 67915
+PermissionRequest              line(s): 38900, 38908, 39558
+can_use_tool                   line(s): 486026, 489482, 489494
+SessionManager                 line(s): 794045, 891898, 891903
+hooks                          line(s): 2077, 38011, 38976
+mcp__                          line(s): 69979, 70034, 70174
+structuredIO                   line(s): 987244, 987274, 987279
+stream-json                    line(s): 641416, 641418, 644357
+input-format                   line(s): 641415, 644359, 972949
+getSystemPrompt                line(s): 2456, 2457, 273388
+ScheduleWakeup                 line(s): 271880, 271891, 272136
+scheduled-tasks                line(s): 469837
+plugin                         line(s): 104, 105, 119
+CLAUDE.md                      line(s): 71422, 71428, 190730
+BASH_DEFAULT_TIMEOUT_MS        line(s): 67244, 469847

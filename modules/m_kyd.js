@@ -1,0 +1,53 @@
+// Module: kyd (lines 433846-433897)
+  var kyd = S(() => {
+    mKe();
+    ((Hyd = new Set([
+      Fe.DD,
+      Fe.DT,
+      Fe.LI,
+      Fe.OPTGROUP,
+      Fe.OPTION,
+      Fe.P,
+      Fe.RB,
+      Fe.RP,
+      Fe.RT,
+      Fe.RTC,
+    ])),
+      (Tyd = new Set([
+        ...Hyd,
+        Fe.CAPTION,
+        Fe.COLGROUP,
+        Fe.TBODY,
+        Fe.TD,
+        Fe.TFOOT,
+        Fe.TH,
+        Fe.THEAD,
+        Fe.TR,
+      ])),
+      (qCo = new Set([
+        Fe.APPLET,
+        Fe.CAPTION,
+        Fe.HTML,
+        Fe.MARQUEE,
+        Fe.OBJECT,
+        Fe.TABLE,
+        Fe.TD,
+        Fe.TEMPLATE,
+        Fe.TH,
+      ])),
+      (G4y = new Set([...qCo, Fe.OL, Fe.UL])),
+      (V4y = new Set([...qCo, Fe.BUTTON])),
+      (Cyd = new Set([
+        Fe.ANNOTATION_XML,
+        Fe.MI,
+        Fe.MN,
+        Fe.MO,
+        Fe.MS,
+        Fe.MTEXT,
+      ])),
+      (xyd = new Set([Fe.DESC, Fe.FOREIGN_OBJECT, Fe.TITLE])),
+      (q4y = new Set([Fe.TR, Fe.TEMPLATE, Fe.HTML])),
+      (z4y = new Set([Fe.TBODY, Fe.TFOOT, Fe.THEAD, Fe.TEMPLATE, Fe.HTML])),
+      (K4y = new Set([Fe.TABLE, Fe.TEMPLATE, Fe.HTML])),
+      (Y4y = new Set([Fe.TD, Fe.TH])));
+  });

@@ -1,0 +1,39 @@
+// Module: cbt (lines 770295-770332)
+  var cbt = S(() => {
+    pBt();
+    Ar();
+    Vb();
+    zxb = new Set([
+      "escape",
+      "return",
+      "enter",
+      "tab",
+      "backspace",
+      "delete",
+      "up",
+      "down",
+      "left",
+      "right",
+      "pageup",
+      "pagedown",
+      "home",
+      "end",
+      "insert",
+      "clear",
+      "center",
+      "undefined",
+      "mouse",
+      "f1",
+      "f2",
+      "f3",
+      "f4",
+      "f5",
+      "f6",
+      "f7",
+      "f8",
+      "f9",
+      "f10",
+      "f11",
+      "f12",
+    ]);
+  });

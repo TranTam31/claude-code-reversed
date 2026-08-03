@@ -1,0 +1,80 @@
+// Module: lFe (lines 275219-275297)
+  var lFe = S(() => {
+    XPt = ids();
+    uXr = { exec: () => null };
+    ((Aee = {
+      codeRemoveIndent: /^(?: {1,4}| {0,3}\t)/gm,
+      outputLinkReplace: /\\([\[\]])/g,
+      indentCodeCompensation: /^(\s+)(?:```)/,
+      beginningSpace: /^\s+/,
+      endingHash: /#$/,
+      startingSpaceChar: /^ /,
+      endingSpaceChar: / $/,
+      nonSpaceChar: /[^ ]/,
+      newLineCharGlobal: /\n/g,
+      tabCharGlobal: /\t/g,
+      multipleSpaceGlobal: /\s+/g,
+      blankLine: /^[ \t]*$/,
+      doubleBlankLine: /\n[ \t]*\n[ \t]*$/,
+      blockquoteStart: /^ {0,3}>/,
+      blockquoteSetextReplace: /\n {0,3}((?:=+|-+) *)(?=\n|$)/g,
+      blockquoteSetextReplace2: /^ {0,3}>[ \t]?/gm,
+      listReplaceTabs: /^\t+/,
+      listReplaceNesting: /^ {1,4}(?=( {4})*[^ ])/g,
+      listIsTask: /^\[[ xX]\] /,
+      listReplaceTask: /^\[[ xX]\] +/,
+      anyLine: /\n.*\n/,
+      hrefBrackets: /^<(.*)>$/,
+      tableDelimiter: /[:|]/,
+      tableAlignChars: /^\||\| *$/g,
+      tableRowBlankLine: /\n[ \t]*$/,
+      tableAlignRight: /^ *-+: *$/,
+      tableAlignCenter: /^ *:-+: *$/,
+      tableAlignLeft: /^ *:-+ *$/,
+      startATag: /^<a /i,
+      endATag: /^<\/a>/i,
+      startPreScriptTag: /^<(pre|code|kbd|script)(\s|>)/i,
+      endPreScriptTag: /^<\/(pre|code|kbd|script)(\s|>)/i,
+      startAngleBracket: /^</,
+      endAngleBracket: />$/,
+      pedanticHrefTitle: /^([^'"]*[^\s])\s+(['"])(.*)\2/,
+      unicodeAlphaNumeric: /[\p{L}\p{N}]/u,
+      escapeTest: /[&<>"']/,
+      escapeReplace: /[&<>"']/g,
+      escapeTestNoEncode: /[<>"']|&(?!(#\d{1,7}|#[Xx][a-fA-F0-9]{1,6}|\w+);)/,
+      escapeReplaceNoEncode:
+        /[<>"']|&(?!(#\d{1,7}|#[Xx][a-fA-F0-9]{1,6}|\w+);)/g,
+      unescapeTest: /&(#(?:\d+)|(?:#x[0-9A-Fa-f]+)|(?:\w+));?/gi,
+      caret: /(^|[^\[])\^/g,
+      percentDecode: /%25/g,
+      findPipe: /\|/g,
+      splitPipe: / \|/,
+      slashPipe: /\\\|/g,
+      carriageReturn: /\r\n|\r/g,
+      spaceLine: /^ +$/gm,
+      notSpaceStart: /^\S*/,
+      endingNewline: /\n$/,
+      listItemRegex: (e) =>
+        new RegExp(`^( {0,3}${e})((?:[	 ][^\\n]*)?(?:\\n|$))`),
+      nextBulletRegex: (e) =>
+        new RegExp(
+          `^ {0,${Math.min(3, e - 1)}}(?:[*+-]|\\d{1,9}[.)])((?:[ 	][^\\n]*)?(?:\\n|$))`,
+        ),
+      hrRegex: (e) =>
+        new RegExp(
+          `^ {0,${Math.min(3, e - 1)}}((?:- *){3,}|(?:_ *){3,}|(?:\\* *){3,})(?:\\n+|$)`,
+        ),
+      fencesBeginRegex: (e) =>
+        new RegExp(`^ {0,${Math.min(3, e - 1)}}(?:\`\`\`|~~~)`),
+      headingBeginRegex: (e) => new RegExp(`^ {0,${Math.min(3, e - 1)}}#`),
+      htmlBeginRegex: (e) =>
+        new RegExp(`^ {0,${Math.min(3, e - 1)}}<(?:[a-z].*>|!--)`, "i"),
+    }),
+      (Nty = /^(?:[ \t]*(?:\n|$))+/),
+      ($ty = /^((?: {4}| {0,3}\t)[^\n]+(?:\n(?:[ \t]*(?:\n|$))*)?)+/),
+      (Fty =
+        /^ {0,3}(`{3,}(?=[^`\n]*(?:\n|$))|~{3,})([^\n]*)(?:\n|$)(?:|([\s\S]*?)(?:\n|$))(?: {0,3}\1[~`]* *(?=\n|$)|$)/),
+      (fXr =
+        /^ {0,3}((?:-[\t ]*){3,}|(?:_[ \t]*){3,}|(?:\*[ \t]*){3,})(?:\n+|$)/),
+      (Uty = /^ {0,3}(#{1,6})(?=\s|$)(.*)(?:\n+|$)/),
+      (CMu = /(?:[*+-]|\d{1,9}[.)])/),

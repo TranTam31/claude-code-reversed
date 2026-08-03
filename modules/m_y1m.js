@@ -1,0 +1,27 @@
+// Module: y1m (lines 1022724-1022749)
+  var y1m = S(() => {
+    st();
+    e7s();
+    ((A8t = require("fs")),
+      (h1m = require("path")),
+      (rSE = [
+        "CLAUDE_CODE_SESSION_ACCESS_TOKEN",
+        "CLAUDE_CODE_WORKER_EPOCH",
+        "CLAUDE_CODE_BRIDGE_SESSION_ID",
+        "CLAUDE_CODE_RESUME_INTERRUPTED_TURN",
+        "CLAUDE_CODE_RESUME_INTERRUPTED_TURN_MAX_AGE_MS",
+        "CLAUDE_CODE_RESUME_PROMPT",
+        "CLAUDE_CODE_SESSION_ID",
+        "CLAUDE_CODE_SYNC_SESSION_REFS",
+        "CLAUDE_CODE_REMOTE_SESSION_ID",
+        "CLAUDE_CODE_TRIGGER_ID",
+        "CLAUDE_CODE_BASE_REF",
+        "CLAUDE_CODE_BASE_REFS",
+        "CLAUDE_CODE_REPO_CHECKOUTS",
+        "CLAUDE_CODE_DIAGNOSTICS_FILE",
+        "CLAUDE_SESSION_INGRESS_TOKEN_FILE",
+        "CLAUDECODE",
+        "CLAUDE_CODE_CHILD_SESSION",
+        "CLAUDE_RUNNER_ACTIVITY_FD",
+      ]));
+  });
