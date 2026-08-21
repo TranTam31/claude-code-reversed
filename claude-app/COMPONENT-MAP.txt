@@ -1,0 +1,101 @@
+# COMPONENT MAP — Claude Desktop v1.30096.5.0 (Electron, MSIX win32-x64)
+# Source: app.asar (extracted), ion-dist renderer, native binaries.
+# - Main process bundles: extracted\.vite\build\ + prettified\
+# - Renderer: C:\Program Files\WindowsApps\Claude_1.30096.5.0_x64__pzs8sxrjxfjjc\app\resources\ion-dist\
+# - IPC detail: ipc-channels.txt (915 channels / 14 namespaces)
+# - Endpoints: api-endpoints.txt, renderer-urls.txt
+
+## 1. MAIN PROCESS FILES (.vite\build)
+- index.pre.js (4.66 MB) -> prettified\index.pre.js.prettified.js
+    App bootstrap, window/menu management, auto-update, session spawning
+- index.chunk-*.js (9 chunks) -> prettified\index.chunk-*.prettified.js
+    Split modules: includes VM manager, node-runtime managers, etc.
+- Workers:
+  - buddy.js -> prettified\buddy.js.prettified.js           (Claude Buddy BLE pairing)
+  - mainWindow.js / mainView.js                               (window & webview glue)
+  - coworkArtifact.js -> prettified\coworkArtifact.js.prettified.js  (artifact bridge)
+  - computerUseTeach.js                                     (Computer Use teaching UI)
+  - mcp-runtime\directMcpHost.js -> prettified\mcp-runtime_directMcpHost.js.prettified.js (772 KB — direct MCP host/stdio)
+  - mcp-runtime\nodeHost.js                                 (node MCP host)
+  - pty-host\ptyHostWorker.js                               (PTY for claude.exe sessions)
+  - file-index-worker\fileIndexWorker.js                    (file search index)
+  - heavy-work-worker\heavyWorkWorker.js                     (git/diff heavy ops)
+  - transcript-search-worker\transcriptSearchWorker.js      (transcript search)
+
+## 2. NATIVE ASSETS (app\resources)
+- cowork-svc.exe (Go, github.com/anthropics/cowork-win32-service)
+    Hyper-V VM manager: HCS/HCN API, gvisor-tap-vsock networking, vsock/plan9 share,
+    named-pipe RPC server, client signature auth. Logs C:\ProgramData\Claude\Logs\cowork-service.log
+- chrome-native-host.exe (Rust) — MCP bridge <-> Chrome
+    Named pipe \\.\pipe\claude-mcp-browser-bridge-<user>; JSON length-prefixed messages.
+- smol-bin.x64.vhdx (37 MB) — Hyper-V boot disk cho VM Cowork (Go runtime + goja JS engine)
+- app.asar.unpacked\: claude-native-binding.node, node-pty conpty.node, github-mcp-server.exe, office365-mcp
+
+## 3. IPC NAMESPACES (14 namespaces, 915 channels)
+# Detail of every channel: ipc-channels.txt
+# Channel pattern: $eipc_message$_1a6a86a9-b6fb-4d64-8e14-a3eb46104c36_$_<ns>_$_<Class>_$_<method>
+## claude.web (666)            — MAIN feature namespace
+## claude.settings (129)       — settings, MCP config, extensions, startup
+## claude.internal.computerUse (22)
+## claude.buddy (18)           — Claude Buddy (BLE)
+## claude.parka (14)           — meeting recording plugin
+## claude.simulator (25)
+## claude.officeAddin (10)
+## claude.coworkArtifact (5)
+## claude.hybrid (3)
+## claude.internal.findInPage (6)
+## claude.internal.localExecConsent (1)
+## claude.internal.ui (14)
+## claude.skills (1)
+## claude.telemetry (1)
+
+## 4. FEATURE -> IPC CLASS MAP
+### Chatbot / Web UI
+- claude.web::Account, Auth, AutoUpdater, BrowserNavigation, Navigation, MenuEvents,
+  WindowControl, WindowState, SessionPopouts, Toast, QuickEntry, DeepLink, DesktopNotifications
+- Renderer pages: claude.ai routes (/, /code, /settings/...)
+
+### Cowork (agent sessions on claude.exe via pty)
+- claude.web::LocalSessions (main session matrix ~200 methods: git, PR, mcp, pty, transcripts, ssh/cloud)
+- claude.web::LocalAgentModeSessions (~120: scheduled, skill, chrome, watch-record, permission)
+- claude.web::LocalSessionEnvironment, ClaudeCode, BuddyRemoteFeed, LocalPlugins/CustomPlugins/PluginBridgeMcp
+- claude.web::Launch (web preview/sandbox tabs), FramebufferPreview (VM screen), ComputerUseLivePreview
+- Workers: ptyHostWorker, heavyWorkWorker, fileIndexWorker, transcriptSearchWorker
+- Backend: spawns claude.exe (claude-code CLI) child process
+
+### Connections (MCP servers)
+- First-party MCP endpoints (hosts): gmail.mcp.claude.com, gdrive.mcp.claude.com, gcal.mcp.claude.com,
+  microsoft365.mcp.claude.com, mcp.slack.com, mcp.box.com
+- CLI-operated: claude.web::LocalSessions::mcpCallTool/mcpListResources/mcpReadResource/mcpAuthenticate,
+  setMcpServers, getLocalMcpServers; LocalAgentModeSessions::directMcp* (directMcpHost worker)
+- Settings: claude.settings::MCP (getMcpServersConfig, setMcpServerConfigs, revealConfig/Logs, mcpStatusChanged),
+  setIsUsingBuiltInNodeForMcp
+- Chrome bridge: chrome-native-host.exe + claude.web::ChromeExtension (install/connect), CoworkScheduledTasks::clearChromePermissions
+
+### Artifacts
+- claude.coworkArtifact::CoworkArtifactBridge (askClaude, callMcpTool, navigateHost, openExternalUrl, runScheduledTask)
+- claude.web::CoworkArtifacts (CRUD html/metadata/thumbnail/versioning/star/share/import/publish)
+- claude.web::CoworkFilePreview, CoworkFeedback
+- Hosting: www.claudeusercontent.com, claude.site, sandbox.claudemcpcontent.com
+
+### Scheduled Tasks
+- claude.web::CCDScheduledTasks + CoworkScheduledTasks (create/getAll/update/status/getFileContent/watch)
+- claude.web::LocalAgentModeSessions::getSessionsForScheduledTask
+- Trigger via CoworkArtifactBridge::runScheduledTask
+
+### Hyper-V VM (Cowork sandbox)
+- claude.web::ClaudeVM (startVM, apiReachability, download smol-bin, run status, HCS/VMP feature checks)
+- claude.web::CoworkSpaces (space/folder/file/memory management — user workspace in VM)
+- cowork-svc.exe + smol-bin.x64.vhdx + gvisor-tap-vsock
+
+### Buddy (mobile companion)
+- claude.buddy::Buddy (scanDevices, pairDevice, install, progress...) + claude.buddy::BuddyBleTransport (rx/tx)
+
+### Parka / Office
+- claude.parka::Parka (meeting recording/notes/summary/transcripts)
+- claude.officeAddin::OfficeAddinFiles (connected files in Office apps)
+
+## 5. LAST KNOWN INVENTORY NUMBERS
+- IPC: 14 namespaces / 915 channels
+- Renderer urls: 627 lines (1936 files scanned) — api-endpoints.txt groups them
+- Main sends to: Sentry DSN 2f98127cbffe4740b1f767a2de77d23b@o1158394.ingest.us.sentry.io/4507368973008896

@@ -1,0 +1,295 @@
+﻿Claude App (v1.30096.5.0) — API & network endpoints inventory
+Nguon: ion-dist renderer (renderer-urls.txt) + main process (.vite/build)
+
+## HOSTS (grouped, count in renderer)
+
+- (relative)/v1  (92)
+- (relative)/api  (90)
+- support.claude.com  (61)
+- github.com  (39)
+- claude.com  (39)
+- assets.claude.ai  (37)
+- code.claude.com  (36)
+- support.anthropic.com  (32)
+- www.anthropic.com  (24)
+- claude.ai  (13)
+- docs.claude.com  (11)
+- www.google.com  (9)
+- platform.claude.com  (8)
+- formatjs.github.io  (6)
+- docs.google.com  (5)
+- api.anthropic.com  (5)
+- www.googleapis.com  (4)
+- anthropic.com  (3)
+- docs.anthropic.com  (3)
+- mcp.example.com  (3)
+- api.addins.store.office.com  (3)
+- privacy.anthropic.com  (3)
+- docs.datadoghq.com  (2)
+- marketplace.visualstudio.com  (2)
+- drivemcp.googleapis.com  (2)
+- status.anthropic.com  (2)
+- gmailmcp.googleapis.com  (2)
+- docs.stripe.com  (2)
+- mail.google.com  (2)
+- privacy.claude.com  (2)
+- play.google.com  (2)
+- mcp-server-gmail-110131437935.us-central1.run.app  (2)
+- mcp-server-gcal-586545259222.us-central1.run.app  (2)
+- sandbox.claudemcpcontent.com  (2)
+- trust.anthropic.com  (2)
+- apps.apple.com  (2)
+- calendarmcp.googleapis.com  (2)
+- stripe.com  (2)
+- chromewebstore.google.com  (2)
+- www.claude.com  (2)
+- www.datadoghq-browser-agent.com  (1)
+- microsoft365.mcp.claude.com  (1)
+- www.claudeusercontent.com  (1)
+- mcp.slack.com  (1)
+- oauth2.googleapis.com  (1)
+- www.threads.com  (1)
+- www.youtube.com  (1)
+- x.com  (1)
+- mcp-server-gdrive-532483229523.us-central1.run.app  (1)
+- www.linkedin.com  (1)
+- mcp.box.com  (1)
+- www.schemastore.org  (1)
+- stuk.github.io  (1)
+- support.google.com  (1)
+- raw.githubusercontent.com  (1)
+- status.claude.com  (1)
+- storage.googleapis.com  (1)
+- slack.com  (1)
+- plugins.jetbrains.com  (1)
+- visgl.github.io  (1)
+- www.claudemcpclient.com  (1)
+- purecatamphetamine.github.io  (1)
+- us.mcp.example.com  (1)
+- us5.datadoghq.com  (1)
+- app.slack.com  (1)
+- assets-proxy.anthropic.com  (1)
+- api.vimeo.com  (1)
+- api.github.com  (1)
+- api.slack.com  (1)
+- cdn.segment.com  (1)
+- claude.ai$  (1)
+- cdn.segment.(com  (1)
+- bedrock-mantle.us-east-1.api.aws  (1)
+- cdn.growthbook.io  (1)
+- accounts.google.com  (1)
+- acme.mcp.example.com  (1)
+- REGION-aiplatform-ENDPOINT_ID.p.googleapis.com  (1)
+- (relative)/v2  (1)
+- claude.turbovote.org  (1)
+- api.box.com  (1)
+- api.example.com  (1)
+- api-staging.anthropic.com  (1)
+- anthropic.skilljar.com  (1)
+- anthropic.turbovote.org  (1)
+- claude.findahelpline.com  (1)
+- github.example.com  (1)
+- gmail.mcp.claude.com  (1)
+- gdrive.mcp.claude.com  (1)
+- fonts.googleapis.com  (1)
+- gcal.mcp.claude.com  (1)
+- lh3.googleusercontent.com  (1)
+- maps.googleapis.com  (1)
+- js.stripe.com  (1)
+- instagram.com  (1)
+- js.hcaptcha.com  (1)
+- dns.google  (1)
+- docs.github.com  (1)
+- config.example.com  (1)
+- claude.site  (1)
+- cli.github.com  (1)
+- fcmregistrations.googleapis.com  (1)
+- firebaseinstallations.googleapis.com  (1)
+- eu.mcp.example.com  (1)
+- docs.sentry.io  (1)
+- drive.google.com  (1)
+
+## RELATIVE /api/* + /v1/* ENDPOINTS (claude.ai / api.anthropic.com)
+
+/api/
+/api/0/
+/api/1.0/users/me
+/api/account
+/api/account/accept_legal_docs
+/api/account/appeal
+/api/account/current_appeal
+/api/account/deletion-allowed
+/api/account/domain_claim_decision
+/api/account/email_consent
+/api/account/enterprise_upgradeable_organizations
+/api/account/export_data
+/api/account/grove_notice_viewed
+/api/account/raven_eligible
+/api/account/settings
+/api/account/ss_enterprise_eligible
+/api/account/standing
+/api/account?statsig_hashing_algorithm=djb2
+/api/account_avatar_image
+/api/account_profile
+/api/accounts/me/consents
+/api/accounts/me/consents/check
+/api/accounts/me/consents/revoke
+/api/accounts/me/organizations/get_or_create_chat_organization
+/api/auth.test
+/api/auth/accept_invite
+/api/auth/exchange_nonce_for_code
+/api/auth/logout
+/api/auth/logout/all-sessions
+/api/auth/send_magic_link
+/api/auth/send_phone_code
+/api/auth/session_reattest/webauthn
+/api/auth/session_reattest/webauthn/challenge
+/api/auth/step_up/webauthn/credentials
+/api/auth/step_up/webauthn/credentials/challenge
+/api/auth/trusted_devices
+/api/auth/verify_google
+/api/auth/verify_magic_link
+/api/auth/verify_phone_code
+/api/billing/gift/confirm
+/api/billing/nonprofit/eligible_organizations
+/api/billing/subscription_pricing
+/api/claude_cli_feedback/bundle
+/api/claude-code/darwin-arm64/latest/download
+/api/claude-code/darwin-x64/latest/download
+/api/claude-code/linux-arm64/latest/download
+/api/claude-code/linux-x64/latest/download
+/api/claude-code/win32-arm64/latest/download?binary_name=claude.exe
+/api/claude-code/win32-x64/latest/download?binary_name=claude.exe
+/api/console
+/api/desktop/
+/api/desktop/darwin/universal/dmg/latest/redirect
+/api/desktop/linux/arm64/deb/latest/redirect
+/api/desktop/linux/x64/deb/latest/redirect
+/api/desktop/win32/arm64/exe/latest/redirect
+/api/desktop/win32/arm64/setup/latest/redirect
+/api/desktop/win32/x64/exe/latest/redirect
+/api/desktop/win32/x64/setup/latest/redirect
+/api/directory/
+/api/enterprise/id_certification
+/api/enterprise_orders/supported_countries
+/api/enterprise-signup/eligibility
+/api/event_logging/
+/api/event_logging/batch
+/api/event_logging/v2/batch
+/api/event_logging/v2/batch?test_mode=true
+/api/frame/db/
+/api/frame/frames
+/api/frame/telemetry
+/api/frame/track
+/api/internal-test/account/burn_usage_credits
+/api/internal-test/account/experiences/reset
+/api/internal-test/account/experiences/reset-exposures
+/api/internal-test/account/reset
+/api/internal-test/account/role
+/api/internal-test/account/subscription
+/api/lti/land/confirm
+/api/organizations/aws_marketplace_signup
+/api/organizations/discoverable
+/api/organizations/invite_link_preview
+/api/organizations/join_via_link
+/api/referral
+/api/supported_regions
+/api/team-signup/eligibility
+/api/team-signup/trial-voucher
+/api/team-signup/voucher-eligible
+/api/team-trial/exposure-eligible
+/api/v1/
+/api/v1/validate
+/api/v4/user
+/v1/agents?beta=true
+/v1/code/agent-proxy/anthropic-oidc/bindings
+/v1/code/agent-proxy/anthropic-oidc/bindings/confirm
+/v1/code/agent-proxy/anthropic-oidc/bindings/disable
+/v1/code/agent-proxy/credentials
+/v1/code/agent-proxy/oauth/presets
+/v1/code/agent-proxy/oauth/start
+/v1/code/agent-proxy/oauth/token-vault/credentials
+/v1/code/agent-proxy/oauth/token-vault/providers
+/v1/code/agent-proxy/presets?latest_only=true
+/v1/code/agent-proxy/provisioning-links
+/v1/code/agent-proxy/rules
+/v1/code/agent-proxy/standalone/associations
+/v1/code/agent-proxy/standalone/registrations
+/v1/code/agent-proxy/test
+/v1/code/agent-proxy-profiles
+/v1/code/agents
+/v1/code/agents?include_virtual=true&include_slack_binding=true&include_teams_binding=true
+/v1/code/approvals/org-settings
+/v1/code/auth/revoke
+/v1/code/channel-connector-catalog
+/v1/code/channels
+/v1/code/github/batch-branch-status
+/v1/code/github/batch-branch-status?caller=epitaxy-discover-repos
+/v1/code/github/compare-refs
+/v1/code/github/get-commit
+/v1/code/github/get-file-content
+/v1/code/github/get-issue
+/v1/code/github/import-token
+/v1/code/github/installations
+/v1/code/github/list-issues
+/v1/code/github/org-connection
+/v1/code/github/org-connection/approvals/oauth/commit
+/v1/code/github/org-connection/approvals/oauth/pending
+/v1/code/github/org-connection/approvals/oauth/start
+/v1/code/github/org-connection/installations-status
+/v1/code/github/org-connection/linkable-installations
+/v1/code/github/org-connection/sync
+/v1/code/github/pr-agent-repo-settings
+/v1/code/github/set-pr-auto-merge
+/v1/code/github/subscribe-pr
+/v1/code/github/unsubscribe-pr
+/v1/code/mcp-config/prewarm
+/v1/code/plugins
+/v1/code/promo/enroll
+/v1/code/promo/quota
+/v1/code/pr-steward/contributions
+/v1/code/pr-steward/cost-breakdown
+/v1/code/pr-steward/org-settings
+/v1/code/pr-steward/org-settings/repo
+/v1/code/pr-steward/settings
+/v1/code/runners/self-hosted/pools
+/v1/code/session_groupings
+/v1/code/sessions
+/v1/code/sessions/heartbeat_check
+/v1/code/sessions/watch?exclude_tags=-
+/v1/code/sessions?limit=1
+/v1/code/slack/my-assigned-channels
+/v1/code/slack/role-channel-assignments
+/v1/code/slack/users/preview_names
+/v1/code/slack/workspaces
+/v1/code/spaces
+/v1/code/triggers
+/v1/code/webhook-triggers
+/v1/complete
+/v1/design/consent
+/v1/design/me
+/v1/design/org/settings
+/v1/environments
+/v1/environments?beta=true
+/v1/files?beta=true
+/v1/filestore/fs/createFile
+/v1/memory_stores?beta=true
+/v1/messages
+/v1/messages/batches
+/v1/messages/batches?beta=true
+/v1/messages/count_tokens
+/v1/messages/count_tokens?beta=true
+/v1/messages?beta=true
+/v1/models
+/v1/models?beta=true
+/v1/oauth/token
+/v1/operon/releases/dl
+/v1/privacy-consents
+/v1/privacy-consents/check
+/v1/privacy-consents?prefix=cookies.
+/v1/projects/
+/v1/sessions
+/v1/sessions?beta=true
+/v1/skills?beta=true
+/v1/user_profiles?beta=true
+/v1/vaults?beta=true
