@@ -1,0 +1,11 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "x": 0, "y": 0, "w": 390, "h": 844, "is_interactive": true, "title": "Tasks" },
+    { "file": "Dashboard.dc.html", "x": 510, "y": 0, "w": 390, "h": 844, "is_interactive": true, "title": "Dashboard" }
+  ],
+  "annotations": [
+    { "id": "note-tasks", "x": 0, "y": -96, "w": 390, "text": "Screen 1 — Tasks\nAdd, check off, delete and filter. Live & interactive." },
+    { "id": "note-dash", "x": 510, "y": -96, "w": 390, "text": "Screen 2 — Dashboard\nWeekly chart, streak, completion, categories. Live & interactive." }
+  ],
+  "launch": { "view": "canvas" }
+}

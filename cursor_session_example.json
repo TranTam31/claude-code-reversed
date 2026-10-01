@@ -1,0 +1,300 @@
+[
+  {
+    "role": "user",
+    "message": {
+      "content": [
+        {
+          "type": "text",
+          "text": "<timestamp>Tuesday, Aug 25, 2026, 2:30 PM (UTC+7)</timestamp>\n<user_query>\nYou read PROBLEM.md and files in folder docs, then give me a comprehensive comment about this\n</user_query>"
+        }
+      ]
+    }
+  },
+  {
+    "role": "assistant",
+    "message": {
+      "content": [
+        {
+          "type": "text",
+          "text": "I'll start by reading the project problem statement and the docs folder so the comment is grounded in those files."
+        },
+        {
+          "type": "tool_use",
+          "name": "Read",
+          "input": {
+            "path": "C:\\Users\\hahah\\.claude\\skills\\using-superpowers\\SKILL.md"
+          }
+        },
+        {
+          "type": "tool_use",
+          "name": "Read",
+          "input": {
+            "path": "C:\\Users\\hahah\\.cursor\\skills-cursor\\canvas\\SKILL.md"
+          }
+        },
+        {
+          "type": "tool_use",
+          "name": "Read",
+          "input": {
+            "path": "C:\\Users\\hahah\\OneDrive\\Documents\\code\\ai-guru-hkt\\PROBLEM.md"
+          }
+        },
+        {
+          "type": "tool_use",
+          "name": "Glob",
+          "input": {
+            "target_directory": "C:\\Users\\hahah\\OneDrive\\Documents\\code\\ai-guru-hkt\\docs",
+            "glob_pattern": "**/*"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "role": "assistant",
+    "message": {
+      "content": [
+        {
+          "type": "text",
+          "text": "The docs folder has nine analyst and guide files. I'll read those next and turn the findings into a structured comment."
+        },
+        {
+          "type": "tool_use",
+          "name": "Read",
+          "input": {
+            "path": "C:\\Users\\hahah\\OneDrive\\Documents\\code\\ai-guru-hkt\\docs\\analyst\\CLAUDE-OPUS.md"
+          }
+        },
+        {
+          "type": "tool_use",
+          "name": "Read",
+          "input": {
+            "path": "C:\\Users\\hahah\\OneDrive\\Documents\\code\\ai-guru-hkt\\docs\\analyst\\CLAUDE-OPUS-tech-review-post-data.md"
+          }
+        },
+        {
+          "type": "tool_use",
+          "name": "Read",
+          "input": {
+            "path": "C:\\Users\\hahah\\OneDrive\\Documents\\code\\ai-guru-hkt\\docs\\analyst\\CLAUDE-OPUS-project-plan.md"
+          }
+        },
+        {
+          "type": "tool_use",
+          "name": "Read",
+          "input": {
+            "path": "C:\\Users\\hahah\\OneDrive\\Documents\\code\\ai-guru-hkt\\docs\\analyst\\OC-DEEPSEEK.md"
+          }
+        },
+        {
+          "type": "tool_use",
+          "name": "Read",
+          "input": {
+            "path": "C:\\Users\\hahah\\OneDrive\\Documents\\code\\ai-guru-hkt\\TODO.md"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "role": "assistant",
+    "message": {
+      "content": [
+        {
+          "type": "tool_use",
+          "name": "Read",
+          "input": {
+            "path": "C:\\Users\\hahah\\OneDrive\\Documents\\code\\ai-guru-hkt\\docs\\analyst\\CLAUDE-OPUS-data-analysis.md",
+            "limit": 200
+          }
+        },
+        {
+          "type": "tool_use",
+          "name": "Read",
+          "input": {
+            "path": "C:\\Users\\hahah\\OneDrive\\Documents\\code\\ai-guru-hkt\\docs\\analyst\\CLAUDE-OPUS-data-normalize-report.md",
+            "limit": 150
+          }
+        },
+        {
+          "type": "tool_use",
+          "name": "Read",
+          "input": {
+            "path": "C:\\Users\\hahah\\OneDrive\\Documents\\code\\ai-guru-hkt\\docs\\analyst\\CLAUDE-OPUS-implementation-guide.md",
+            "limit": 150
+          }
+        },
+        {
+          "type": "tool_use",
+          "name": "Read",
+          "input": {
+            "path": "C:\\Users\\hahah\\OneDrive\\Documents\\code\\ai-guru-hkt\\docs\\guide\\CLAUDE-OPUS-learning-path.md",
+            "limit": 120
+          }
+        },
+        {
+          "type": "tool_use",
+          "name": "Read",
+          "input": {
+            "path": "C:\\Users\\hahah\\OneDrive\\Documents\\code\\ai-guru-hkt\\docs\\guide\\CLAUDE-OPUS-reference-repos.md",
+            "limit": 100
+          }
+        }
+      ]
+    }
+  },
+  {
+    "role": "assistant",
+    "message": {
+      "content": [
+        {
+          "type": "tool_use",
+          "name": "Read",
+          "input": {
+            "path": "C:\\Users\\hahah\\.cursor\\skills-cursor\\canvas\\sdk\\index.d.ts",
+            "limit": 200
+          }
+        },
+        {
+          "type": "tool_use",
+          "name": "Glob",
+          "input": {
+            "glob_pattern": "*.canvas.tsx",
+            "target_directory": "C:\\Users\\hahah\\.cursor\\projects\\c-Users-hahah-OneDrive-Documents-code-ai-guru-hkt\\canvases"
+          }
+        },
+        {
+          "type": "tool_use",
+          "name": "GetDynamicTools",
+          "input": {
+            "namespace": "cursor-app-control",
+            "toolName": "rename_chat"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "role": "assistant",
+    "message": {
+      "content": [
+        {
+          "type": "tool_use",
+          "name": "Read",
+          "input": {
+            "path": "C:\\Users\\hahah\\.cursor\\skills-cursor\\canvas\\sdk\\ui-primitives.d.ts",
+            "limit": 120
+          }
+        },
+        {
+          "type": "tool_use",
+          "name": "Read",
+          "input": {
+            "path": "C:\\Users\\hahah\\.cursor\\skills-cursor\\canvas\\sdk\\todo-list.d.ts",
+            "limit": 80
+          }
+        }
+      ]
+    }
+  },
+  {
+    "role": "assistant",
+    "message": {
+      "content": [
+        {
+          "type": "tool_use",
+          "name": "Read",
+          "input": {
+            "path": "C:\\Users\\hahah\\.cursor\\skills-cursor\\canvas\\sdk\\ui-primitives.d.ts",
+            "offset": 200,
+            "limit": 250
+          }
+        }
+      ]
+    }
+  },
+  {
+    "role": "assistant",
+    "message": {
+      "content": [
+        {
+          "type": "tool_use",
+          "name": "Grep",
+          "input": {
+            "path": "C:\\Users\\hahah\\.cursor\\skills-cursor\\canvas\\sdk\\ui-primitives.d.ts",
+            "pattern": "export type (StatProps|CalloutProps|PillProps|TableProps)",
+            "glob": "*.d.ts"
+          }
+        },
+        {
+          "type": "tool_use",
+          "name": "Read",
+          "input": {
+            "path": "C:\\Users\\hahah\\.cursor\\skills-cursor\\canvas\\sdk\\ui-primitives.d.ts",
+            "offset": 110,
+            "limit": 90
+          }
+        },
+        {
+          "type": "tool_use",
+          "name": "Read",
+          "input": {
+            "path": "C:\\Users\\hahah\\.cursor\\skills-cursor\\canvas\\sdk\\ui-primitives.d.ts",
+            "offset": 450,
+            "limit": 120
+          }
+        }
+      ]
+    }
+  },
+  {
+    "role": "assistant",
+    "message": {
+      "content": [
+        {
+          "type": "text",
+          "text": "The write-up is strong on problem framing and data work, but the scoring story and remaining calendar don’t line up. I’ll put that into a briefing you can keep open beside the chat."
+        },
+        {
+          "type": "tool_use",
+          "name": "Write",
+          "input": {
+            "path": "C:\\Users\\hahah\\.cursor\\projects\\c-Users-hahah-OneDrive-Documents-code-ai-guru-hkt\\canvases\\vifinqa-docs-briefing.canvas.tsx",
+            "contents": "import {\n  Callout,\n  Card,\n  CardBody,\n  CardHeader,\n  Divider,\n  Grid,\n  H1,\n  H2,\n  H3,\n  Pill,\n  Row,\n  Stack,\n  Stat,\n  Table,\n  Text,\n  TodoListCard,\n  useHostTheme,\n} from \"cursor/canvas\";\n\nexport default function ViFinqaDocsBriefing() {\n  const { tokens } = useHostTheme();\n\n  return (\n    <Stack gap={24} style={{ padding: 24, maxWidth: 960 }}>\n      <Stack gap={8}>\n        <H1>ViFinQA — comment on PROBLEM.md and docs</H1>\n        <Text tone=\"secondary\">\n          Read against PROBLEM.md, nine files under docs/, and TODO.md.\n          Today is 25 Aug 2026; public-test deadline is 31 Aug 23:59 ICT.\n        </Text>\n      </Stack>\n\n      <Callout tone=\"warning\" title=\"One-line verdict\">\n        The write-up of the contest is unusually good. The remaining work is\n        not: block E (parse/normalize) is done; almost everything that scores\n        is still empty, and the clock is six days.\n      </Callout>\n\n      <Grid columns={4} gap={12}>\n        <Stat value=\"6 days\" label=\"Until public cutoff\" tone=\"danger\" />\n        <Stat value=\"1,973\" label=\"Reports parsed (block E)\" tone=\"success\" />\n        <Stat value=\"141,668\" label=\"Normalized tables\" />\n        <Stat value=\"1,012\" label=\"Questions, no gold labels\" tone=\"warning\" />\n      </Grid>\n\n      <H2>What the contest actually is</H2>\n      <Text>\n        Not “chat with financials.” It is a two-stage, execution-grounded\n        pipeline on Vietnamese listed-company statements: retrieve the right\n        table(s), then emit pandas that runs and matches the gold number\n        within a (still unpublished) tolerance. Hallucinated numbers or\n        invented citations fail the design of the task even before scoring.\n      </Text>\n      <Text>\n        Constraints that actually bite: open-weight models only, ≤14B\n        parameters, released before 1 Jun 2026. Closed APIs (GPT-4o, Gemini)\n        are disallowed. That forces retrieval quality, schema grounding, and\n        an execute–repair loop to compensate for a mid-size model.\n      </Text>\n\n      <H2>Official scoring vs leftover leaderboard folklore</H2>\n      <Text tone=\"secondary\" size=\"small\">\n        PROBLEM.md now marks the organizer method as canonical. Older analyst\n        notes still mix in a Stage-2 screenshot with different column names.\n      </Text>\n      <Table\n        striped\n        headers={[\"Pillar\", \"What it measures\", \"Strategic implication\"]}\n        rows={[\n          [\n            \"Tables + Docs P/R/F2 (+ MRR@5)\",\n            \"F2 = 5PR/(4P+R); recall weighted ~4× precision. Both table and text streams are scored.\",\n            \"Prefer a wider top-k, then rerank. Do not skip docs, but do not over-invest: docs F2 was already high on the old board.\",\n          ],\n          [\n            \"Answer Accuracy\",\n            \"Share of queries whose executed number matches gold within organizer tolerance.\",\n            \"Unit conversion (triệu / VNĐ / tỷ) is as important as the formula. Format the number the question asked for.\",\n          ],\n          [\n            \"Execution Accuracy\",\n            \"Share of queries whose pandas both runs and is correct. New official pillar.\",\n            \"A “LLM reads the table and answers without code” fallback can save Answer Accuracy and still zero Execution. Keep pandas as the main path.\",\n          ],\n        ]}\n        rowTone={[\"info\", \"warning\", \"danger\"]}\n      />\n      <Callout tone=\"info\" title=\"Still unknown from the organizer\">\n        Final mix of Table vs Doc vs F2 vs Answer vs Execution; whether MRR@5\n        enters the ranking; the numeric tolerance on Answer Accuracy. Treat\n        all three pillars as live until those weights are published.\n      </Callout>\n\n      <H2>Where the team actually is</H2>\n      <Grid columns={2} gap={16}>\n        <TodoListCard\n          defaultExpanded\n          todos={[\n            {\n              id: \"e\",\n              content: \"Block E: parse HTML OCR tables, normalize VN numbers/units, store catalog — done (1,973/1,973)\",\n              status: \"completed\",\n            },\n            {\n              id: \"schema\",\n              content: \"Data contract in finqa/data/schema.py\",\n              status: \"completed\",\n            },\n            {\n              id: \"units\",\n              content: \"Freeze answer unit/rounding format for scoring\",\n              status: \"pending\",\n            },\n            {\n              id: \"dev\",\n              content: \"Hand-label 30–50-question dev set (no gold from organizer)\",\n              status: \"pending\",\n            },\n            {\n              id: \"a\",\n              content: \"Block A: metadata filter + BM25 + dense + RRF + rerank\",\n              status: \"pending\",\n            },\n            {\n              id: \"b\",\n              content: \"Block B: schema prompt, ≤14B LLM, sandbox, self-correction\",\n              status: \"pending\",\n            },\n            {\n              id: \"h\",\n              content: \"End-to-end pipeline + make_submission.py + first public submit\",\n              status: \"pending\",\n            },\n          ]}\n        />\n        <Stack gap={12}>\n          <H3>The calendar mismatch</H3>\n          <Text>\n            The project plan was written as if 19 Aug still had ~12 days.\n            That plan’s “submit first public by day 8” is now overdue. Docs\n            and learning-path material are complete enough to start coding;\n            they are no longer the bottleneck.\n          </Text>\n          <Text>\n            TODO.md still has “run build_processed on all 1,973 files”\n            unchecked, while the normalize report dated 20 Aug says that\n            batch already finished with 0 errors. Treat the report as\n            ground truth and stop tracking that item as open work.\n          </Text>\n        </Stack>\n      </Grid>\n\n      <H2>What the docs get right</H2>\n      <Stack gap={8}>\n        <Text>\n          The Opus problem analysis is the right mental model: retrieval is\n          the accuracy ceiling; dirty tables silently poison every later\n          number; this is RAG + Text-to-Code + Vietnamese financial NLP, not\n          a prompt contest.\n        </Text>\n        <Text>\n          The data analysis is the highest-value file. It killed the Excel/PDF\n          assumption. Tables are HTML inside OCR .txt, split by page markers.\n          Filenames already encode ticker, year, and consolidated vs parent.\n          Questions name the desired unit. There is no train/dev gold.\n        </Text>\n        <Text>\n          Post-data tech review correctly reorders work: metadata filter is\n          the cheapest Tables-F2 lever (141k tables → ~70 per report);\n          BM25 first because BCTC language is lexical; LoRA is nearly useless\n          without labels; Kaggle T4 + 4-bit AWQ is the realistic 14B path\n          for a laptop with no discrete GPU.\n        </Text>\n      </Stack>\n\n      <H2>Where the docs fight each other</H2>\n      <Table\n        striped\n        headers={[\"Tension\", \"Older note\", \"Current truth\"]}\n        rows={[\n          [\n            \"Is pandas code scored?\",\n            \"Early notes said no.\",\n            \"Official Execution Accuracy: code must run and be correct.\",\n          ],\n          [\n            \"What ranks you?\",\n            \"Answer Accuracy ≈ 0.999 with rank; Docs F2 saturated.\",\n            \"Three pillars. Old board names do not match the official set. Use those numbers only as difficulty hints.\",\n          ],\n          [\n            \"Fine-tune LoRA?\",\n            \"Plan phase 3 still lists it.\",\n            \"Tech review after data: drop for round 1 — no labels.\",\n          ],\n          [\n            \"Parse stack\",\n            \"implementation-guide still mentions pdfplumber/camelot.\",\n            \"pandas.read_html / BeautifulSoup on OCR HTML. Already implemented.\",\n          ],\n        ]}\n        rowTone={[\"danger\", \"warning\", \"warning\", \"info\"]}\n      />\n\n      <H2>Traps that will actually cost points</H2>\n      <Grid columns={2} gap={12}>\n        <Card>\n          <CardHeader trailing={<Pill size=\"sm\" active>data</Pill>}>\n            Parent vs consolidated\n          </CardHeader>\n          <CardBody>\n            <Text>\n              Sample question asks for công ty mẹ; files are often\n              *_consolidated_*. Wrong report type is a silent wrong number,\n              not a retrieval miss you will notice without a unit test.\n            </Text>\n          </CardBody>\n        </Card>\n        <Card>\n          <CardHeader trailing={<Pill size=\"sm\" active>scoring</Pill>}>\n            Units in the question\n          </CardHeader>\n          <CardBody>\n            <Text>\n              detect_unit / convert exist in the normalizer but are not\n              wired into the answer path. That is a direct Answer Accuracy\n              leak.\n            </Text>\n          </CardBody>\n        </Card>\n        <Card>\n          <CardHeader trailing={<Pill size=\"sm\" active>ocr</Pill>}>\n            Dirty cells, clean DataFrames\n          </CardHeader>\n          <CardBody>\n            <Text>\n              Batch did not crash, which is not the same as footnote tables\n              being trustworthy. Self-correction only helps if the retrieved\n              frame is the right one and columns are visible in the prompt.\n            </Text>\n          </CardBody>\n        </Card>\n        <Card>\n          <CardHeader trailing={<Pill size=\"sm\" active>ir</Pill>}>\n            Multi-hop + derived ratios\n          </CardHeader>\n          <CardBody>\n            <Text>\n              ROE/ROA/growth are not cells. They need several rows, sometimes\n              several reports. F2 recall-heavy retrieval must return a set,\n              not a single “best” table.\n            </Text>\n          </CardBody>\n        </Card>\n      </Grid>\n\n      <Divider />\n\n      <H2>What I would do in the next six days</H2>\n      <Text>\n        Freeze PROBLEM.md scoring as the spec. Stop expanding analyst\n        notes. Ship a weak but complete loop, then iterate on public\n        scores.\n      </Text>\n      <Table\n        headers={[\"Order\", \"Work\", \"Why now\"]}\n        rows={[\n          [\n            \"1\",\n            \"Hand-label ~30 questions spanning parent/consolidated, units, YoY, ROE.\",\n            \"Without this you cannot tell BM25 from dense, or Qwen-Coder from Qwen3.\",\n          ],\n          [\n            \"2\",\n            \"Metadata filter (ticker/year/report type) + BM25 on catalog.jsonl. Submit.\",\n            \"Largest Tables-F2 gain per hour. Dense/FAISS after a public score exists.\",\n          ],\n          [\n            \"3\",\n            \"Schema + df.head prompt, sandbox, 2–3 repair loops, unit convert on output.\",\n            \"Serves both Answer and Execution Accuracy. No LoRA.\",\n          ],\n          [\n            \"4\",\n            \"Hybrid + rerank, then a 14B AWQ bake-off on Kaggle (Coder vs Instruct vs Qwen3).\",\n            \"Only after the first public number. Docs stream: good-enough hybrid, stop.\",\n          ],\n        ]}\n        columnAlign={[\"right\", \"left\", \"left\"]}\n        rowTone={[\"danger\", \"warning\", \"info\", \"neutral\"]}\n      />\n\n      <H3>On the docs as a product</H3>\n      <Text>\n        CLAUDE-OPUS.md and OC-DEEPSEEK.md largely duplicate each other;\n        keep one knowledge map. Learning-path and reference-repos are\n        correct for onboarding and now optional. The live sources of\n        truth should be PROBLEM.md (rules + scoring), the data-analysis\n        file (corpus facts), the post-data tech review (stack), and\n        TODO.md once it is reconciled with the normalize report.\n      </Text>\n      <Text tone=\"secondary\" size=\"small\">\n        Sources: PROBLEM.md; docs/analyst/*; docs/guide/*; TODO.md. Leaderboard\n        averages (Answer 0.24, Tables F2 0.29, Docs F2 0.78) are a Stage-2\n        checkpoint and may have moved.\n      </Text>\n    </Stack>\n  );\n}\n"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "role": "assistant",
+    "message": {
+      "content": [
+        {
+          "type": "tool_use",
+          "name": "StrReplace",
+          "input": {
+            "path": "C:\\Users\\hahah\\.cursor\\projects\\c-Users-hahah-OneDrive-Documents-code-ai-guru-hkt\\canvases\\vifinqa-docs-briefing.canvas.tsx",
+            "old_string": "  TodoListCard,\n  useHostTheme,\n} from \"cursor/canvas\";\n\nexport default function ViFinqaDocsBriefing() {\n  const { tokens } = useHostTheme();\n\n  return (",
+            "new_string": "  TodoListCard,\n} from \"cursor/canvas\";\n\nexport default function ViFinqaDocsBriefing() {\n  return ("
+          }
+        }
+      ]
+    }
+  },
+  {
+    "role": "assistant",
+    "message": {
+      "content": [
+        {
+          "type": "text",
+          "text": "The contest is a **two-stage, execution-grounded RAG system**, not a chatbot. You retrieve the right Vietnamese BCTC tables, emit pandas that actually runs, and cite a real source. The write-up of that problem is strong. The remaining risk is calendar: **block E is done; almost everything that scores is not**, and public test closes **31 Aug 2026**.\n\nA structured briefing is in [ViFinQA docs briefing](C:\\Users\\hahah\\.cursor\\projects\\c-Users-hahah-OneDrive-Documents-code-ai-guru-hkt\\canvases\\vifinqa-docs-briefing.canvas.tsx) — a live canvas you can open beside the chat.\n\n## What PROBLEM.md is really asking for\n\nThe organizer wants a system that, given a Vietnamese financial question:\n\n1. Finds the relevant table(s) (and, separately, text/notes) in ~1,973 OCR reports covering 100 tickers, 2015–2025.\n2. Turns the question into **runnable pandas** on those frames.\n3. Returns a number that can be checked, with company / year / report / table / page.\n\nThree properties dominate:\n\n- **Retrieval is the ceiling.** Miss the table and perfect code cannot recover.\n- **Grounding is required.** Invented cells or citations fail the stated goals even before metrics.\n- **The answer is the executed number**, not the model’s prose.\n\nRules that actually constrain you: **open-weight only, ≤14B, released before 1 Jun 2026**. Closed models are out. A 14B model will not “reason its way” past bad retrieval or dirty schema; you need filter + index + schema in the prompt + an execute–repair loop.\n\n## Scoring: trust PROBLEM.md, treat older boards as folklore\n\nThe scoring section in `PROBLEM.md` is now labeled **canonical**. Three automatic, macro-averaged pillars:\n\n| Pillar | Meaning | What it pushes you to do |\n|---|---|---|\n| **Tables & Docs P/R/F2** (+ MRR@5) | F2 weights **recall ~4× precision**. Both streams are scored. | Take a wider top-k, then rerank. Keep docs “good enough”; do not skip them. |\n| **Answer Accuracy** | Number matches gold **within a tolerance that is still unpublished**. | Convert to the unit in the question (`triệu đồng` vs `VNĐ`). |\n| **Execution Accuracy** | Pandas **runs and is correct**. | A “just read the table, no code” fallback can save Answer and still **zero Execution**. |\n\nStill unknown: mix of Table vs Doc vs F2 vs Answer vs Execution; whether MRR@5 counts; the numeric tolerance.\n\nOlder notes still talk as if **Answer Accuracy ≈ rank** (correlation 0.999) and Docs F2 is saturated. Those Stage-2 snapshot numbers (Answer ~0.24 avg / 0.67 max; Tables F2 ~0.29 / 0.64; Docs F2 ~0.78 / 0.97) are useful as **difficulty**, not as the official formula. `PROBLEM.md` already says the checkpoint used **different column names**.\n\n## What the docs get right\n\n**Opus analysis** (`CLAUDE-OPUS.md`) is the right map: RAG + Text-to-Code + Table QA + Vietnamese financial NLP. The risk chain is correct — bad normalize → silent wrong numbers; missing tables → nothing to compute. Derived ratios (ROE/ROA/growth), unit/period mismatch, parent vs consolidated, and schema hallucination are the real traps.\n\n**Data analysis** is the highest-value file. It corrected the Excel/PDF assumption:\n\n- Tables are **HTML inside OCR `.txt`**, split by `===== PAGE N =====`.\n- Filenames already encode **ticker / year / consolidated vs parent**.\n- `code_stock.csv` maps ticker ↔ company name.\n- **1,012 questions, no answers.** You must hand-label a tiny dev set.\n- Questions specify the **output unit**.\n\nThat is why metadata filter is not a nicety: it can cut **141k tables down to ~70** in one report.\n\n**Post-data tech review** reorders the stack correctly: metadata first, BM25 earlier than expected (BCTC language is lexical), dense after the filter, rerank cheap on ~70 candidates, **LoRA almost useless without labels**, run 14B as **4-bit AWQ on Kaggle T4**, not on a GPU-less laptop.\n\n**Block E report** shows real progress: **1,973/1,973 files, 141,668 tables, 121,576 text blocks, 0 build errors**, pytest 9/9. VN number parsing, negatives in parentheses, stripping formula junk, and keeping “Mã số” as ID not money — that is the right work.\n\n**Implementation guide, learning path, SemEval-2025 Task 8 / TableLLM pointers** are a competent onboarding pack. SemEval Task 8 is the closest English cousin (pandas + self-debug + open ≤14B).\n\n## Where the docs fight each other (and TODO)\n\nThe corpus was written in layers and not fully rewritten when scoring and data landed.\n\n- **“Code is not scored”** is explicitly retracted. Execution Accuracy is live.\n- **Project plan** still lists LoRA in phase 3; **tech review** says drop it for round 1.\n- **Implementation guide** still mentions `pdfplumber`/`camelot`; the real parser is HTML.\n- **TODO.md** still has “run `build_processed` on all 1,973 files” open; the normalize report dated **20 Aug** says that batch **already finished**.\n- **Opus vs DeepSeek** analyses largely duplicate. Keep one knowledge map.\n- Plan dated from **19 Aug (~12 days)**; today that “first public submit by day 8” is already late.\n\n## The uncomfortable part\n\nWith six days to public cutoff, the team has **finished the foundation and not started the contest**. Unchecked: unit convention for answers, 30–50 labeled questions, BM25, dense, RRF, metadata filter, both retrieval evals, prompt/LLM/sandbox/self-correction, end-to-end, submission script.\n\nThat is the opposite of the plan’s own rule: **submit a weak full loop early, then iterate on public scores.**\n\nThe remaining E items (messy footnote tables, wiring `detect_unit`/`convert` into the answer path) matter, but they are not more important than **one BM25+filter run that produces a file you can submit**.\n\n## What I would actually do\n\nTreat `PROBLEM.md` as spec. Stop growing analyst markdown.\n\n1. **Label ~30 questions** that cover parent vs consolidated, units, multi-year, and a derived ratio. Without this you cannot compare models or retrievers.\n2. **Metadata filter + BM25 on `catalog.jsonl`**, then **submit**. That is the cheapest Tables F2 move.\n3. **Schema + `df.head` in the prompt, sandbox, 2–3 repair loops, convert units on the way out.** That is both Answer and Execution. No LoRA.\n4. Only after a public number: hybrid + rerank, then a **14B AWQ bake-off** (Qwen2.5-Instruct vs Coder vs Qwen3) on Kaggle. Docs: standard hybrid, then stop.\n\nLive sources of truth: **PROBLEM.md**, **data-analysis**, **post-data tech review**, **normalize report**, and a **TODO.md reconciled with those**. Everything else is onboarding."
+        }
+      ]
+    }
+  },
+  {
+    "type": "turn_ended",
+    "status": "success"
+  }
+]
